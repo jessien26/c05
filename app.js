@@ -78,8 +78,128 @@ console.log("Bai 5: Dem uoc so ===> ", k)
 //Cho trước một số nguyên n. Hãy cho biết n có phải là số nguyên tố không. Số nguyên tố là số chỉ có 2 ước số là 1 và chính nó. Ví dụ: 7 là số nguyên tố, 9 không phải là số nguyên tố.
 
 function kiemTraSoNguyenTo(bien6){
-    let dayuocso
+    let chieuDaiDayUocSo = timUocSo(bien6).length
+    if (chieuDaiDayUocSo < 2) {
+        return true
+    }
+    else{
+        return false
+    }
 }
+const y = kiemTraSoNguyenTo(number)
+    if(y === true){
+        console.log("Day la so nguyen to")
+    }
+    else{
+        console.log("Day khong phai la so nguyen to")
+    }
 
+//## Bài 7: Liệt kê chẵn
+//Liệt kê các số chẵn trong mảng một chiều số nguyên.
 
+let bai7array = [1,2,4,5,6,7,9]
+function lietkechan(bien7){
+    let n = bien7.length
+    let bai7arraySoChan =[]
+    for(let index = 0; index < n; index++){
+        if(bien7[index] % 2 === 0){
+            bai7arraySoChan.push(bien7[index])
+        }
+    }
+    return bai7arraySoChan
+}
+let ketQuaBai7 = lietkechan(bai7array)
+console.log("Bai 7 ===> ", ketQuaBai7)
 
+//Bài 8: Liệt kê dương
+//Liệt kê các số dương trong mảng một chiều số nguyên.
+
+let bai8array = [-1, -2, -4, 7, -9, 2, 4, 5]
+function lietKeDuong (array8){
+    let n = array8.length
+    let bai8arraySoDuong =[]
+    for(let index = 0; index < n; index++){
+        if(array8[index] > 0){
+            bai8arraySoDuong.push(array8[index])
+        }
+    }
+    return bai8arraySoDuong
+}
+let ketQuaBai8 = lietKeDuong (bai8array)
+console.log("Bai 8 ===> ", ketQuaBai8)
+
+//## Bài 9: Liệt kê số nguyên tố
+//Liệt kê các số nguyên tố có trong mảng một chiều số nguyên.
+
+let bai9array = [-1, -2, -4, 7, -9, 2, 4, 5]
+function lietKeSoNguyenTo (array9){
+    let arraySoNguyenDuongBai9 = []
+    for (let index = 0; index < array9.length; index++){
+        if (array9[index] > 0){
+            arraySoNguyenDuongBai9.push(array9[index])
+        }
+    }
+    return arraySoNguyenDuongBai9
+    }
+function inSoNguyenToBai9(){
+    let arraySoNguyenToBai9 =[]
+    let a = timUocSo(arraySoNguyenDuongBai9)
+    if (a.length > 2) {
+        arraySoNguyenToBai9.push[a]
+        }
+    return arraySoNguyenToBai9
+}
+let ketQuaBai9 = lietKeSoNguyenTo(bai9array)
+console.log("Ket qua bai 9 ===> ", ketQuaBai9)
+
+//## Bài 10: Tổng âm
+//Tính tổng các số âm trong mảng một chiều số nguyên.
+
+let bai10array = [-1, -2, -4, 7, -9, 2, 4, 5]
+function tinhTongSoAm(array10){
+    let tongSoAm = 0
+    for(index = 0; index < array10.length; index++){
+        if (array10[index] < 0){
+            tongSoAm = tongSoAm + array10[index]
+        }
+    }
+    return tongSoAm
+}
+const ketQuaBai10 = tinhTongSoAm(bai10array)
+console.log ("Bai 10 ====> ", ketQuaBai10)
+
+// Bài 11: Tích số nguyên tố
+//Tính tích các số nguyên tố có trong mảng một chiều số nguyên.
+
+let bai11array = [-1, -2, -4, 7, -9, 2, 4, 5]
+function tinhTichSoNguyenTo(array11){
+    let daySoNguyenToBai11 = lietKeSoNguyenTo (array11)
+    let V1 = 1
+    for(let index = 0; index < daySoNguyenToBai11.length; index++){
+        V1 = V1 * daySoNguyenToBai11[index]
+    }
+    return V1
+}
+const ketQuaBai11 = tinhTichSoNguyenTo(bai11array)
+console.log("Bai 11 =>>>>> ", ketQuaBai11)
+
+//## Bài 12: Đếm lẻ
+//Đếm các số lẻ trong mảng một chiều số nguyên.
+
+let bai12array = [-1, -2, -4, 7, -9, 3, 4, 5]
+function demSoLe(array12){
+    let dem = 0
+    for(let index = 0; index < array12.length; index++){
+        if(array12[index] % 2 === 1){
+            dem++
+        }
+    }
+    return dem
+}
+const ketQuaBai12 = demSoLe(bai12array)
+console.log("Bai 12 ===> ", ketQuaBai12)
+
+//## Bài 13: Đếm số nguyên tố
+//Đếm các số nguyên tố có trong mảng một chiều số nguyên.
+let bai13array = [-1, -2, -4, 7, -9, 3, 4, 5]
+function 
